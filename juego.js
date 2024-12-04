@@ -1,56 +1,63 @@
-const movable = document.getElementById('cuadrado');//obtiene el element y lo almacena este sera el que se mueve
-const movable2 = document.getElementById('cuadrado2');
-let position = { top: 0, left: 0 };//inicialzan en 0 rastrean la posicion   
+const cuadrado1 = document.getElementById('cuadrado');
+const cuadrado2 = document.getElementById('cuadrado2');
 
-function mover(dx, dy) {//obtiene dos parametros horizontal y vertical
-    position.top += dy;// si es positivo se mueve haia abajo, si es - hacia arriba
-    position.left += dx;//si es sitivo se mueve hacia la derecha si es - izquierda
-    movable.style.top = position.top + 'px';// se establece el CSS y se declara que es en pxeles 
-    movable.style.left = position.left + 'px';//iual que arriba
+// Obtén la posicion
+let position1 = {
+    top: parseInt(window.getComputedStyle(cuadrado1).top) || 0,//1
+    left: parseInt(window.getComputedStyle(cuadrado1).left) || 0,
+};
+let position2 = {
+    top: parseInt(window.getComputedStyle(cuadrado2).top) || 0,
+    left: parseInt(window.getComputedStyle(cuadrado2).left) || 0,
+};
+
+function mover(dx, dy) {
+    position1.top += dy;
+    position1.left += dx;
+    cuadrado1.style.top = position1.top + 'px';
+    cuadrado1.style.left = position1.left + 'px';
 }
 
-document.addEventListener('keydown', (event) => {//ha traves del evento detecta la tecla presionada 
-    switch(event.key) {//switch para evaluar la prodiedad 
-        case 'ArrowUp':// se actva en caso de presionar la fllecha de arriba
-        
-        mover(0, -10);// si se cumple llama a la funcon y lo mueve 10px arriba
+function mover2(dx, dy) {
+    position2.top += dy;
+    position2.left += dx;
+    cuadrado2.style.top = position2.top + 'px';
+    cuadrado2.style.left = position2.left + 'px';
+}
+
+document.addEventListener('keydown', (event) => {
+    switch (event.key) {
+        case 'ArrowUp':
+            mover(0, -10);
             break;
-        case 'ArrowDown':// se actva en caso de presionar la fllecha de ABAJO
-       
-        mover(0, 10);// si se cumple llama a la funcon y lo mueve 10px abajo
+        case 'ArrowDown':
+            mover(0, 10);
             break;
-        case 'ArrowLeft':// se actva en caso de presionar la flecha de la izquierda
-        
-        mover(-10, 0);// si se cumple llama a la funcon y lo mueve 10px izquierda
+        case 'ArrowLeft':
+            mover(-10, 0);
             break;
-        case 'ArrowRight':// se actva en caso de presionar la flecha de la derecha
-        
-        mover(10, 0);// si se cumple llama a la funcon y lo mueve 10px derecha
+        case 'ArrowRight':
+            mover(10, 0);
             break;
     }
 });
-function mover2(dx, dy) {//obtiene dos parametros horizontal y vertical
-    position.top += dy;// si es positivo se mueve haia abajo, si es - hacia arriba
-    position.left += dx;//si es sitivo se mueve hacia la derecha si es - izquierda
-    movable2.style.top = position.top + 'px';// se establece el CSS y se declara que es en pxeles 
-    movable2.style.left = position.left + 'px';//iual que arriba
-}
 
-document.addEventListener('keydown', (event) => {//ha traves del evento detecta la tecla presionada 
-    switch(event.key) {//switch para evaluar la prodiedad 
-        case 'w':// se actva en caso de presionar la w
-        mover2(0, -10);// si se cumple llama a la funcon y lo mueve 10px arriba
+document.addEventListener('keydown', (event) => {
+    switch (event.key) {
+        case 'w':
+            mover2(0, -10);
             break;
-        case 's':// se actva en caso de presionar la s
-        mover2(0, 10);// si se cumple llama a la funcon y lo mueve 10px abajo
+        case 's':
+            mover2(0, 10);
             break;
-       
-        case 'a':// se actva en caso de presionar la a
-        mover2(-10, 0);// si se cumple llama a la funcon y lo mueve 10px izquierda
+        case 'a':
+            mover2(-10, 0);
             break;
-       
-        case 'd':// se actva en caso de presionar la d
-        mover2(10, 0);// si se cumple llama a la funcon y lo mueve 10px derecha
+        case 'd':
+            mover2(10, 0);
             break;
     }
 });
+
+
+//1-Obtiene los estilos aplicados, convierte los valores en pixeles , si no encuentra =||0 como valor predeterminado

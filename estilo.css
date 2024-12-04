@@ -1,0 +1,57 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #3CB371); /* Cielo y pasto */
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor de carreteras */
+.road-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Separación entre carreteras */
+}
+
+/* Estilo de la carretera */
+.road {
+    position: relative;
+    width: 1520px;
+    height: 200px;
+    background: #333; /* Color de la carretera */
+    border: 2px solid #000;
+    border-radius: 50px; /* Bordes redondeados */
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Curvas en la carretera */
+.curved-road {
+    border-radius: 100px; /* Hacer que las esquinas sean curvas */
+    clip-path: path(
+        "M 0 50 Q 250 0 500 50 
+           L 500 150 
+           Q 250 200 0 150 Z"
+    );
+}
+
+/* Línea central discontinua */
+.lane-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 10px;
+    background: repeating-linear-gradient(
+        to right,
+        #fff,
+        #fff 20px,
+        transparent 20px,
+        transparent 40px
+    );
+}

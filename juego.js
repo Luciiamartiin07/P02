@@ -1,28 +1,28 @@
-const cuadrado1 = document.getElementById('cuadrado');
-const cuadrado2 = document.getElementById('cuadrado2');
+const zapa = document.getElementById('zapa');
+const luci = document.getElementById('luci');
 
 // Obtén la posicion
 let position1 = {
-    top: parseInt(window.getComputedStyle(cuadrado1).top) || 0,//1
-    left: parseInt(window.getComputedStyle(cuadrado1).left) || 0,
+    top: parseInt(window.getComputedStyle(zapa).top) || 0,//1
+    left: parseInt(window.getComputedStyle(zapa).left) || 0,
 };
 let position2 = {
-    top: parseInt(window.getComputedStyle(cuadrado2).top) || 0,
-    left: parseInt(window.getComputedStyle(cuadrado2).left) || 0,
+    top: parseInt(window.getComputedStyle(luci).top) || 0,
+    left: parseInt(window.getComputedStyle(luci).left) || 0,
 };
 
 function mover(dx, dy) {
     position1.top += dy;
     position1.left += dx;
-    cuadrado1.style.top = position1.top + 'px';
-    cuadrado1.style.left = position1.left + 'px';
+    zapa.style.top = position1.top + 'px';
+    zapa.style.left = position1.left + 'px';
 }
 
 function mover2(dx, dy) {
     position2.top += dy;
     position2.left += dx;
-    cuadrado2.style.top = position2.top + 'px';
-    cuadrado2.style.left = position2.left + 'px';
+    luci.style.top = position2.top + 'px';
+    luci.style.left = position2.left + 'px';
 }
 
 document.addEventListener('keydown', (event) => {
@@ -58,6 +58,3 @@ document.addEventListener('keydown', (event) => {
             break;
     }
 });
-
-
-//1-Obtiene los estilos aplicados, convierte los valores en pixeles , si no encuentra =||0 como valor predeterminado

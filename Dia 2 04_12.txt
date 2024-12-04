@@ -1,0 +1,23 @@
+﻿4 de diciembre
+-¿Qué objetivo hemos cumplido?
+-Crear la imagen de fondo.
+-Juntar los divs con el fondo.
+-Poner en los divs, unas imágenes de nuestros coches.
+
+
+-Los que no hemos cumplido y porqué 
+Desde el principio del día teníamos un css creado con dos carreteras y un css aparte con 2 divs creados que 1 se mueve a través de las flechas y otro se mueve a través de las letras asdw. Queríamos juntarlos pero al juntarlos los divs no nos aparecían, para ello hemos puesto una imagen de fondo creada por nosotros con sus bordes en vez de poner el css que nos había generado la ia y ya nos aparecen los divs.
+
+
+NO NOS HA DADO TIEMPO, continuaremos el siguiente día.
+-Crear colisión de objetos
+-Si choca con un objeto que empiece otra vez en la posición inicial.
+
+
+-Los objetivos de hoy
+-Crear la imagen de fondo.
+-Juntar los divs con el fondo.
+-Que nos funcionen los divs entero, que tenemos pequeños fallos.
+-Poner en los divs, unas imágenes de nuestros coches.
+-Crear colisión de objetos.
+-Si choca con un objeto que empiece otra vez en la posición inicial.

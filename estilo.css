@@ -20,7 +20,7 @@ body {
     gap: 20px; 
 }
 
-#cuadrado, #cuadrado2 {
+#zapa, #luci {
     width: 100px; 
     height: 100px; 
     background-size: cover; 
@@ -28,14 +28,14 @@ body {
     position: absolute; 
 }
 
-#cuadrado2 {
+#luci {
     background-image: url('imagencochemitica.webp');
     top: 10px; 
-    left: calc(50% - 400px); /* Centra y ajusta la posición */
+    left: calc(50% - 500px); /* Centra y ajusta la posición */
 }
 
-#cuadrado {
+#zapa {
     background-image: url('imagencoche.webp');
     top: 10px;
-    right: calc(50% - 300px); /* Centra y ajusta la posición  */
+    right: calc(50% - 350px); /* Centra y ajusta la posición  */
 }

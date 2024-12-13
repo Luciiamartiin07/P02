@@ -20,7 +20,7 @@ body {
     gap: 20px; 
 }
 
-#zapa, #luci {
+#zapa, #luci, #enemigo {
     width: 100px; 
     height: 100px; 
     background-size: cover; 
@@ -31,11 +31,16 @@ body {
 #luci {
     background-image: url('imagencochemitica.webp');
     top: 10px; 
-    left: calc(50% - 500px); /* Centra y ajusta la posición */
+    left: calc(50% - 400px); /* Centra y ajusta la posición */
 }
 
 #zapa {
     background-image: url('imagencoche.webp');
     top: 10px;
-    right: calc(50% - 350px); /* Centra y ajusta la posición  */
+    right: calc(50% - 300px); /* Centra y ajusta la posición  */
+}
+
+#enemigo {
+    background-image: url('8b54e957-6ab8-4709-9c9e-2dc23ec18b7e.jpg');
+    top: 10px;
 }

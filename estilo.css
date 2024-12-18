@@ -20,7 +20,7 @@ body {
     gap: 20px; 
 }
 
-#zapa, #luci, #enemigo {
+#zapa, #luci {
     width: 100px; 
     height: 100px; 
     background-size: cover; 
@@ -40,7 +40,21 @@ body {
     right: calc(50% - 300px); /* Centra y ajusta la posición  */
 }
 
-#enemigo {
-    background-image: url('8b54e957-6ab8-4709-9c9e-2dc23ec18b7e.jpg');
+#patoZapa, #patoLuci{
+    width: 50px; 
+    height: 50px; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+#patoZapa {
+    right: calc(50% - 200PX); /* Centra y ajusta la posición  */
+    background-image: url('patoZapa.png');
+    top: 10px;
+}
+
+#patoLuci {
+    background-image: url('patoLuci.png');
     top: 10px;
 }
